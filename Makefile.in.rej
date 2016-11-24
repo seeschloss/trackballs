@@ -1,0 +1,21 @@
+--- Makefile.in
++++ Makefile.in
+@@ -374,12 +374,12 @@ trackballs.desktop: trackballs.desktop.in
+ 	echo "Exec=$(bindir)/trackballs" >> trackballs.desktop
+ 
+ install-iconsDATA:
+-	$(mkinstalldirs) $(iconsdir)/32x32/apps
+-	$(INSTALL_DATA) $(srcdir)/trackballs-32x32.png $(iconsdir)/32x32/apps/trackballs.png
+-	$(mkinstalldirs) $(iconsdir)/48x48/apps
+-	$(INSTALL_DATA) $(srcdir)/trackballs-48x48.png $(iconsdir)/48x48/apps/trackballs.png
+-	$(mkinstalldirs) $(iconsdir)/64x64/apps
+-	$(INSTALL_DATA) $(srcdir)/trackballs-64x64.png $(iconsdir)/64x64/apps/trackballs.png
++	$(mkinstalldirs) $(DESTDIR)$(iconsdir)/32x32/apps
++	$(INSTALL_DATA) $(srcdir)/trackballs-32x32.png $(DESTDIR)$(iconsdir)/32x32/apps/trackballs.png
++	$(mkinstalldirs) $(DESTDIR)$(iconsdir)/48x48/apps
++	$(INSTALL_DATA) $(srcdir)/trackballs-48x48.png $(DESTDIR)$(iconsdir)/48x48/apps/trackballs.png
++	$(mkinstalldirs) $(DESTDIR)$(iconsdir)/64x64/apps
++	$(INSTALL_DATA) $(srcdir)/trackballs-64x64.png $(DESTDIR)$(iconsdir)/64x64/apps/trackballs.png
+ 
+ uninstall-iconsDATA:
+ 	-rm -f $(iconsdir)/32x32/apps/trackballs.png
