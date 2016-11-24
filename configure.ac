@@ -57,7 +57,7 @@ dnl Check for GUILE
 GUILE_FLAGS
 LIBS="${GUILE_LDFLAGS} ${LIBS}"
 CFLAGS="${GUILE_CFLAGS} ${CFLAGS} -I./ -I../"
-CXXFLAGS="${CXXFLAGS} ${GUILE_CFLAGS} -I./ -I../"
+CXXFLAGS="${CXXFLAGS} ${GUILE_CFLAGS} -fpermissive -I./ -I../"
 
 
 dnl For precompiled binaries only..
